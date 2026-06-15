@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>diszkret fotok</title>
+<meta content="mejor spa" property="og:description">
+<meta content="https://i.postimg.cc/RFL2y9dd/Screenshot-3.jpg" property="og:image">
+<script id="_wau271">var _wau = _wau || []; _wau.push(["small", "akaza", "271"]);</script><script async src="//waust.at/s.js"></script>
+    <!-- CSS en línea optimizado y conciso -->
+    <style>
+        /* Importación de fuente Impact para el estilo solicitado */
+        @import url('https://fonts.googleapis.com/css2?family=Impact&display=swap');
+
+        /* Reinicio y centrado absoluto */
+        body {
+            background-color: #000;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Estilo del GIF (150x150 px) */
+        .gif {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        /* Estilo del texto "Cargando..." */
+        .text {
+            font-family: 'Impact', sans-serif; 
+            font-size: 32px;
+            color: #fff; /* Letras Blancas */
+            margin-top: 20px;
+            /* Borde Negro (text-shadow simple) */
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            letter-spacing: 2px;
+        }
+
+        /* Estilo del botón "Continuar" */
+        #btn-continue {
+            display: none;
+            margin-top: 30px;
+            padding: 12px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(180deg, #ff4c8a 0%, #d83073 100%); 
+            border: 2px solid #fff; 
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            transition: opacity 0.3s;
+            text-transform: uppercase;
+        }
+        
+        #btn-continue:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor del contenido -->
+    <div>
+        <!-- GIF del Cargador -->
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG55b3d5ZWFwNWh4cGhtaGNudzNreHRqaDFnYW93N2RzZ2k4ajAweiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WiIuC6fAOoXD2/giphy.gif" alt="Cargador animado" class="gif">
+        
+        <!-- Texto de Carga -->
+        <h1 class="text"></h1>
+        
+        <!-- Botón de Continuar (Oculto inicialmente) -->
+        <button id="btn-continue" onclick="iniciarRedireccion()">ENTER</button>
+    </div>
+
+    <script>
+        // URL de destino - SOLO se accede mediante el clic del botón
+        const DESTINO_URL = "https://cautious-chainsaw-red.vercel.app/"; //
+        const TIEMPO_ESPERA = 20; // 20 milisegundos
+
+        // Función que inicia la redirección
+        function iniciarRedireccion() {
+            window.location.replace(DESTINO_URL);
+        }
+
+        // Lógica para mostrar el botón después del tiempo de espera
+        document.addEventListener('DOMContentLoaded', () => {
+            const boton = document.getElementById('btn-continue');
+            
+            // Temporizador para mostrar el botón
+            setTimeout(() => {
+                boton.style.display = 'block';
+            }, TIEMPO_ESPERA);
+        });
+    </script>
+
+</body>
+
+</html>
